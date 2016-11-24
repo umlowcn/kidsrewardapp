@@ -1,0 +1,5 @@
+<h2>Routines</h2>
+
+<div class="list-group">
+    <button class="list-group-item" *ngFor="let routine of routines" (click)="onSelect(routine)" style="text-transform: capitalize">{{ routine.type }}</button>
+</div>

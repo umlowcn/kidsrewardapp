@@ -1,0 +1,25 @@
+<div *ngIf="routine">
+  <h3 style="text-transform: capitalize">{{ routine.type }} Routine</h3>
+
+  <div class="funkyradio" *ngFor="let behaviour of routine.behaviours; let i=index">
+        <div class="funkyradio-primary">
+            <input type="checkbox" id="checkbox-{{i}}" [(ngModel)]="behaviour.earned"/>
+            <label [attr.for]="'checkbox-' + i">{{ behaviour.description }}</label>
+        </div>
+  </div>
+
+  <p>
+    <button (click)="gotoHeroes()">Back</button>
+  </p>
+</div>
+
+
+<style>
+  .btn span.glyphicon {
+    opacity: 0;
+  }
+  
+  .btn.active span.glyphicon {
+    opacity: 1;
+  }
+</style>
