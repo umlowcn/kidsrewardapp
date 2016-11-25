@@ -1,8 +1,9 @@
 
-<ul class="nav nav-pills">
+<ul class="nav nav-pills" *ngIf="auth.authenticated()">
   <li role="presentation" class="active"><a href="#">Home</a></li>
   <li role="presentation"><a routerLink="/" routerLinkActive="active">Home</a> </li>
   <li role="presentation"><a routerLink="/routines" routerLinkActive="active">Routines</a></li>
+  <button class="btn btn-primary btn-margin" (click)="auth.logout()" *ngIf="auth.authenticated()">Log Out</button> 
 </ul>
 
 <div class="container">

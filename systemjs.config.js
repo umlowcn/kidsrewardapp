@@ -25,6 +25,7 @@
       '@angular/upgrade': 'npm:@angular/upgrade/bundles/upgrade.umd.js',
 
       // other libraries
+      'angular2-jwt': 'node_modules/angular2-jwt/angular2-jwt.js',
       'rxjs':                      'npm:rxjs',
       'angular-in-memory-web-api': 'npm:angular-in-memory-web-api/bundles/in-memory-web-api.umd.js'
     },
@@ -36,6 +37,9 @@
       },
       rxjs: {
         defaultExtension: 'js'
+      },
+      'angular2-jwt': {
+       defaultExtension: 'js'
       }
     }
   });

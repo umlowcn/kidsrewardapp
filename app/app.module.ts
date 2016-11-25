@@ -5,7 +5,11 @@ import { FormsModule }          from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { RoutinesModule }   from './components/routines/routines.module';
 import { AppComponent }  from './app.component';
-import { HomeComponent }  from './home.component';
+import { LoginComponent }  from './login.component';
+
+import { AUTH_PROVIDERS }      from 'angular2-jwt';
+import { AuthService }      from './auth/auth.service';
+import { AuthGuard } from './auth/auth.guard';
 
 @NgModule({
   imports: [ 
@@ -17,8 +21,13 @@ import { HomeComponent }  from './home.component';
   ],
   declarations: [ 
     AppComponent,
-    HomeComponent
+    LoginComponent
   ],
+  providers: [
+        AUTH_PROVIDERS,
+        AuthService,
+        AuthGuard
+  ],  
   bootstrap: [ AppComponent ]
 })
 
